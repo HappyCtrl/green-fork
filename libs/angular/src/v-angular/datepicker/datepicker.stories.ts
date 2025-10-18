@@ -144,6 +144,7 @@ const PrimaryTemplate: StoryFn<DateStoryArgs & any> = (args) => {
       [size]="size"
       [displayDisabledAsLocked]="displayDisabledAsLocked"
       [closeCalendarOnEscape]="closeCalendarOnEscape"
+      [closeOnScroll]="closeOnScroll"
       >
     </nggv-dateinput>
     `,
@@ -178,6 +179,7 @@ const TemplateWithSelected: StoryFn<DateStoryArgs> = (args) => {
       [dateCharacters]="dateCharacters"
       [firstDayOfWeek]="firstDayOfWeek"
       [formControl]="formControl"
+      [closeOnScroll]="closeOnScroll"
       >
     </nggv-dateinput>
     `,
@@ -224,6 +226,7 @@ const TemplateWithFormControl: StoryFn<DateStoryArgs & any> = (
           [reset]="reset$"
           [locked]="locked"
           [displayDisabledAsLocked]="displayDisabledAsLocked"
+          [closeOnScroll]="closeOnScroll"
           >
         </nggv-dateinput>
       </div>
@@ -273,6 +276,7 @@ const TemplateWithFormGroup: StoryFn<DateStoryArgs & any> = (
           [withErrorIcon]="withErrorIcon"
           [dateCharacters]="dateCharacters"
           [firstDayOfWeek]="firstDayOfWeek"
+          [closeOnScroll]="closeOnScroll"
           >
         </nggv-dateinput>
       </div>
@@ -312,6 +316,7 @@ const AltTemplate: StoryFn<DateStoryArgs> = (args) => {
         [withErrorIcon]="withErrorIcon"
         [firstDayOfWeek]="firstDayOfWeek"
         [formControl]="formControl"
+        [closeOnScroll]="closeOnScroll"
         >
       </nggv-dateinput>
     `,
@@ -342,6 +347,7 @@ const ExtendedTemplate: StoryFn<DateStoryArgs> = (args) => {
         [withErrorIcon]="withErrorIcon"
         [firstDayOfWeek]="firstDayOfWeek"
         [formControl]="formControl"
+        [closeOnScroll]="closeOnScroll"
         >
         <button class="gds-button gds-button-alternative gds-button--small" (click)="emitToday('${new Date().toISOString()}'); datepicker.close()">
           Today
@@ -383,6 +389,7 @@ const TemplateWithTwoInputs: StoryFn<DateStoryArgs> = (args) => {
           [withErrorIcon]="withErrorIcon"
           [firstDayOfWeek]="firstDayOfWeek"
           [formControl]="formControl"
+          [closeOnScroll]="closeOnScroll"
           >
         </nggv-dateinput>
         <input class="gds-field" style="margin-left: 1rem; width: 264px; height: 42px; margin-top: 2.5rem"/>
@@ -421,6 +428,7 @@ const CustomLockedTemplate: StoryFn<DateStoryArgs & any> = (args) => {
       [locked]="locked"
       [displayDisabledAsLocked]="displayDisabledAsLocked"
       [closeCalendarOnEscape]="closeCalendarOnEscape"
+      [closeOnScroll]="closeOnScroll"
       >
       <ng-template #lockedTpl let-state>Today ({{ state | date: 'shortDate' }})</ng-template>
     </nggv-dateinput>
@@ -454,6 +462,7 @@ const LargeBodyTemplate: StoryFn<DateStoryArgs & any> = (args) => {
       [size]="size"
       [displayDisabledAsLocked]="displayDisabledAsLocked"
       [closeCalendarOnEscape]="closeCalendarOnEscape"
+      [closeOnScroll]="closeOnScroll"
       [dynamicPosition]="dynamicPosition"
       >
     </nggv-dateinput>
@@ -475,6 +484,7 @@ Primary.args = {
   disableDates: [],
   disableWeekDays: [],
   closeCalendarOnEscape: true,
+  closeOnScroll: false,
   required: true,
   invalid: false,
   ngModel: null,
